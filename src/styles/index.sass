@@ -1,0 +1,22 @@
+.accordion
+    .accordion-title
+        margin-top: 10px
+        border-bottom: 1px solid #ddd
+        padding: 10px 30px 10px 10px
+        margin: 0
+        cursor: pointer
+        position: relative
+        &::after
+            content: '<'
+            width: 15px
+            right: 10px
+            transform-origin: center center
+            position: absolute
+            transition: all .25s linear
+        &.is-active
+            border-bottom: 1px solid #ddd
+            &::after
+                transform: rotate(-90deg)
+    .accordion-content
+        overflow: hidden
+        transition: all .25s linear
